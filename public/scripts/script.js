@@ -10,6 +10,9 @@ document.querySelector('form').addEventListener('submit', (event) => {
   }
 })
 
+socket.onAny((event, ...args) => {
+  console.log(event, args);
+});
 socket.on('message', (message) => {
   addMessage(message)
 })
